@@ -22,4 +22,14 @@
 <br>
 
 ## DB 모델링
+![shoppingmall (3)](https://user-images.githubusercontent.com/106241314/215694670-38b41fa9-21aa-4326-8189-a13deb2fadc4.png)
+<br>
 
+
+## 구현 기능
+- 회원 : 회원가입, 로그인, 로그아웃 
+<br> < Spring Security를 이용하여 구현, 유효성 검증 사용 >
+- 상품 : 상품등록, 상품조회, 상품관리
+<br> < modelmapper 라이브러리, Querydsl 이용 >
+<br>    상품수정, 상품 상세 페이지
+- 주문 : 상품주문, 주문내역 조회, 주문 취소
