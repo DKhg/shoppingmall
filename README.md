@@ -39,14 +39,17 @@
 ## API 명세
 |View|Method|End Point|
 |----|----|----|
-|회원 가입 페이지|Get|/member/new|
-|회원 가입|Post|/member/new|
-|로그인 페이지|Get|/member/login|
-|로그인|Post|/member/login|
+|메인 페이지|Get|/|
+|회원 가입 페이지|Get|/members/new|
+|회원 가입|Post|/members/new|
+|로그인 에러 페이지|Get|/members/login/error|
+|로그인|Get|/members/login|
 |상품 등록|Post|/admin/item/new|
 |상품 등록 페이지|Get|/admin/item/new|
-|상품 조회|Get|/admin/item/{itemId}, /admin/items, /admin/items/{page}|
+|상품 조회|Get|/admin/item/{itemId}|
 |상품 수정|Post|/admin/item/{itemId}|
+|상품 관리|Get|/admin/items, /admin/items/{page}|
+|상품 상세 페이지|Get|/item/{itemId}|
 |장바구니 담기|Post|/cart|
 |장바구니 페이지|Get|/cart|
 |장바구니 상품 수정|Patch|/cartItem/{cartItemId}|
