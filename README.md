@@ -36,7 +36,7 @@
 
 <br>
 
-## API 명세
+## API 명세서
 |View|Method|End Point|
 |----|----|----|
 |메인 페이지|Get|/|
