@@ -1,9 +1,9 @@
-# SpringBoot-Project(Funiture Shoppingmall)
+# 💁‍♂️SpringBoot-Project(Funiture Shoppingmall)
 - SpringBoot와 JPA를 이용한 가구 쇼핑몰
 <br>
 
 
-## 프로젝트 개발 환경
+## ⚙프로젝트 개발 환경
 - 운영체제 : Microsoft Windows 11
 - 통합개발환경(IDE) : IntelliJ
 - JDK Version : JDK 11
@@ -14,19 +14,19 @@
 
 <br>
 
-## 프로젝트 기술 스택
+## 📗프로젝트 기술 스택📗
 - HTML, CSS, JS, BOOTSTRAP, THYMELEAF
 - SpringBoot, Spring Security, Spring Data JPA, Spring Web, Lombok
 - Hibernate, MySQL
 
 <br>
 
-## DB 모델링
+## 🖊DB 모델링
 ![shoppingmall (3)](https://user-images.githubusercontent.com/106241314/215694670-38b41fa9-21aa-4326-8189-a13deb2fadc4.png)
 <br>
 
 
-## 구현 기능
+## 🔧구현 기능
 - 회원(Member) : 회원가입, 로그인, 로그아웃 
 <br>     < Spring Security를 이용하여 구현, 유효성 검증 사용 >
 - 상품(Item) : 상품등록, 상품조회, 상품관리
@@ -36,7 +36,7 @@
 
 <br>
 
-## API 명세서
+## 💻API 명세서
 |View|Method|End Point|
 |----|----|----|
 |메인 페이지|Get|/|
