@@ -3,6 +3,7 @@
 <br>
 
 
+
 ## ⚙프로젝트 개발 환경
 - 운영체제 : Microsoft Windows 11
 - 통합개발환경(IDE) : IntelliJ
@@ -15,9 +16,9 @@
 <br>
 
 ## 📗프로젝트 기술 스택📗
-- HTML, CSS, JS, BOOTSTRAP, THYMELEAF
-- SpringBoot, Spring Security, Spring Data JPA, Spring Web, Lombok
-- Hibernate, MySQL
+- <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JS-F7DF1E?style=flat-square&logo=html&logoColor=white" /> <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=html&logoColor=white" /> <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=html&logoColor=white" />
+- <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=html&logoColor=white" /> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=html&logoColor=white" />, Spring Data JPA, Spring Web, Lombok
+- <img src="https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=html&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=html&logoColor=white" />
 
 <br>
 
@@ -31,14 +32,14 @@
 <br>     < Spring Security를 이용하여 구현, 유효성 검증 사용 >
 - 상품(Item) : 상품등록, 상품조회, 상품관리
 <br>     < modelmapper 라이브러리, Querydsl 이용 >
-<br>    상품수정, 상품 상세 페이지
+<br> 상품수정, 상품 상세 페이지
 - 주문(Order) : 상품주문, 주문내역 조회, 주문 취소
 
 <br>
 
 ## 💻API 명세서
 |View|Method|End Point|
-|----|----|----|
+|:----:|:----:|:----:|
 |메인 페이지|Get|/|
 |회원 가입 페이지|Get|/members/new|
 |회원 가입|Post|/members/new|
