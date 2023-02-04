@@ -58,6 +58,10 @@
 
 <br>
 
+![메인화면](https://user-images.githubusercontent.com/106241314/216755638-5e4768c2-f0ff-4bdd-8077-079b949b80d3.png)
+
+<br>
+
 ## 💻API 명세서
 |View|Method|End Point|
 |:----:|:----:|:----:|
