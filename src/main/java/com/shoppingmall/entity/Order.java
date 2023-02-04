@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "orders") // 정렬할때 order 키워드가 있어서 Order 엔티티에 매핑되는 테이블로 "orders"를 지정
 @Getter
 @Setter
 public class Order extends BaseEntity{
@@ -30,6 +30,7 @@ public class Order extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus; //주문상태
 
+    // 양방향 매핑에서 데이터 무결성을 침해할 수 있기 때문에 한쪽 테이블에서만 관리한다. mappedby = "주인 테이블"
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems = new ArrayList<>();
 

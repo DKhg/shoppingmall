@@ -96,10 +96,10 @@
     <div class="d-flex mb-3 align-self-center">
       <h4 th:text="${order.orderDate} + ' 주문'"></h4>
       <div class="ml-3">
-        <th:block th:if="${order.orderStatus == T(com.shop.constant.OrderStatus).ORDER}">
+        <th:block th:if="${order.orderStatus == T(com.shoppingmall.constant.OrderStatus).ORDER}">
           <button type="button" class="btn btn-outline-secondary" th:value="${order.orderId}" onclick="cancelOrder(this.value)">주문취소</button>
         </th:block>
-        <th:block th:unless="${order.orderStatus == T(com.shop.constant.OrderStatus).ORDER}">
+        <th:block th:unless="${order.orderStatus == T(com.shoppingmall.constant.OrderStatus).ORDER}">
           <h4>(취소 완료)</h4>
         </th:block>
       </div>
@@ -126,7 +126,7 @@
 
       <li class="page-item" th:classappend="${orders.number eq 0}?'disabled':''">
         <a th:href="@{'/orders/' + ${orders.number-1}}" aria-label='Previous' class="page-link">
-          <span aria-hidden='true'>Previous</span>
+          <span aria-hidden='true'>이전으로</span>
         </a>
       </li>
 
@@ -136,7 +136,7 @@
 
       <li class="page-item" th:classappend="${orders.number+1 ge orders.totalPages}?'disabled':''">
         <a th:href="@{'/orders/' + ${orders.number+1}}" aria-label='Next' class="page-link">
-          <span aria-hidden='true'>Next</span>
+          <span aria-hidden='true'>다음으로</span>
         </a>
       </li>
 

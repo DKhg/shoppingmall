@@ -30,6 +30,7 @@ public class MemberController {
 
     @PostMapping(value = "/new")
     public String newMember(@Valid MemberFormDto memberFormDto, BindingResult bindingResult, Model model) {
+        //@Valid 예외처리 상위버전
 
         if (bindingResult.hasErrors()) {
             return "member/memberForm";

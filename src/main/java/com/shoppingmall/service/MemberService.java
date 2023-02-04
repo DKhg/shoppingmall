@@ -18,10 +18,11 @@ public class MemberService implements UserDetailsService {
     private final MemberRepository memberRepository;
 
     public Member saveMember(Member member){
-        validateDuplicateMember(member);
+        validateDuplicateMember(member); // 이미 가입된 회원인지 확인먼저하기
         return memberRepository.save(member);
     }
 
+    // 중복회원 확인하는 메소드
     private void validateDuplicateMember(Member member){
         Member findMember = memberRepository.findByEmail(member.getEmail());
         if(findMember != null){
@@ -29,6 +30,7 @@ public class MemberService implements UserDetailsService {
         }
     }
 
+    // 시큐리티 사용자 인증
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 

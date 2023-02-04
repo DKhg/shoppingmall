@@ -40,7 +40,7 @@ public class Member extends BaseEntity{
         member.setAddress(memberFormDto.getAddress());
         String password = passwordEncoder.encode(memberFormDto.getPassword());
         member.setPassword(password);
-        member.setRole(Role.USER); //관리자로 로그인하게 하려면 Role.ADMIN으로 바꿔야함
+        member.setRole(Role.USER); //관리자로 로그인하게 하려면 Role.ADMIN으로 바꿔야함 , 일반회원은 USER
         return member;
     }
 }

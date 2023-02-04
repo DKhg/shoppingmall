@@ -22,7 +22,7 @@ public class Item extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO) // 고정값
     private Long id; //상품번호
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50) //@NotNull 은 유효성 검증까지 해준다 더 안전
     private String itemName; //상품이름
 
     @Column(name="price", nullable = false)

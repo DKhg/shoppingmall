@@ -38,6 +38,8 @@ public class ItemFormDto {
 
     private static ModelMapper modelMapper = new ModelMapper();
 
+
+    // modelMapper 서로 다른 클래스의 값을 필드의 이름과 자료형이 같으면 getter, setter를 통해 값을 복사해 객체를 반환해준다.
     public Item createItem() {
         return modelMapper.map(this, Item.class);
     }
