@@ -70,6 +70,8 @@
 ![메인화면2](https://user-images.githubusercontent.com/106241314/216755785-eee2b926-8841-4467-8a75-8e76e08079d8.png)
 
 <br>
+* 메인화면에는 가구 쇼핑몰의 대표적인 배너와 관리자들이 등록한 상품의 이름, 상세설명, 가격을 보여주었습니다. Thymeleaf Layout Dialect dependency를 추가하여 하나의 layout 페이지를 여러페이지에 적용할 수 있게 하였습니다. 그리고 footer, header를 만들고 layout에서 변경되는 영억엔 fragment="content"로 설정하여 만들페이지를 끼워 넣었습니다. Navbar는 부트스트랩을 참고하여 만들었고 header영역에도 추가 하였습니다. 회원가입, 상품등록, 주문 등 이후에 메인페이지로 돌아갈 수 있게 main.html를 만들었습니다.
+<br>
 
 ## 로그인, 회원가입
 
@@ -83,6 +85,9 @@
 
 <br>
 
+* 회원가입, 로그인은 security dependency를 추가하여 구현하였습니다. 그에 따라 WebSecurityConfigurerAdapter를 상속 받는 SecurityConfig.java를 만들어 보안 설정을 하였습니다. 각각 멤버가 일반 유저인지 관리자인지 구분할 수 있게 Role.java 코드를 작성했습니다. 회원가입 페이지는 부트스트랩을 참고하여 변형하여 사용하였습니다. validation dependency를 추가하여 회원 가입 처리를 할때 유효성 검증을 할 수 있게하여 해당페이지에 이유를 보여주도록 하였습니다. 로그인, 로그아웃은 비밀번호 암호화를 위해 PasswordEncoder를 사용하였고 MemberService가 UserDetailsService를 구현하게 하여 기능을 만들었습니다.
+<br>
+
 ## 상품등록, 관리 ( 관리자용 )
 
 <br>
@@ -93,6 +98,9 @@
 
 ![상품관리화면](https://user-images.githubusercontent.com/106241314/216755826-1aaadfbb-4f45-451f-86a5-ca4462f9ec13.png)
 
+<br>
+
+* 상품등록과 관리는 관리자만 이용할 수 있게 구현하였으며, 관리에서 상품이름에 링크를 걸어 들어가면 수정까지 할 수 있게 하였습니다. 상품 등록을 함에 있어서 이미지를 추가 할 수 있게 fileService를 만들어 이용하였습니다. JPA의 Auditing 기능을 이용하기위해  AuditorAware 인터페이스를 구현하여 공통으로 엔티티가 저장 또는 수정될 때 자동으로 등록일, 수정일, 등록자, 수정자를 입력해주게 하였습니다. 보통 테이블에는 위의 4가지를 모두 넣어주지만 어떤 테이블은 등록자, 수정자를 넣지않아 BaseTimeEntity만 상속받을 수 있도록 BaseTimeEntity를 생성하였습니다. 그리고 상속받을 수 있게 BaseEntity도 생성했습니다.
 <br>
 
 ## 상품 담기, 장바구니 내역, 구매 이력 ( 회원용 )
