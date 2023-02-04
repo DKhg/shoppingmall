@@ -62,6 +62,42 @@
 
 <br>
 
+![메인화면2](https://user-images.githubusercontent.com/106241314/216755785-eee2b926-8841-4467-8a75-8e76e08079d8.png)
+
+
+<br>
+
+![로그인페이지](https://user-images.githubusercontent.com/106241314/216755806-59419d80-ce15-4161-895d-26929597b27f.png)
+
+<br>
+
+![회원가입페이지](https://user-images.githubusercontent.com/106241314/216755814-db85fcee-b4ad-4cec-9801-2059f027bb96.png)
+
+<br>
+
+
+![상품등록화면](https://user-images.githubusercontent.com/106241314/216755823-4ad60866-5cb8-4caa-89a4-9ca371bf9b20.png)
+
+<br>
+
+![상품관리화면](https://user-images.githubusercontent.com/106241314/216755826-1aaadfbb-4f45-451f-86a5-ca4462f9ec13.png)
+
+<br>
+
+
+![회원메인상품선택](https://user-images.githubusercontent.com/106241314/216755879-354d401d-06f8-4611-8a8f-2d24a05bfd73.png)
+
+<br>
+
+
+![장바구니화면](https://user-images.githubusercontent.com/106241314/216755973-b0b21c3f-cc2e-416b-8d1f-102afd2ea4f3.png)
+
+<br>
+
+![구매이력화면](https://user-images.githubusercontent.com/106241314/216755956-4a73db4a-45b8-48d6-be11-2f52217ffede.png)
+
+<br>
+
 ## 💻API 명세서
 |View|Method|End Point|
 |:----:|:----:|:----:|
