@@ -60,6 +60,11 @@
 
 ## 메인화면
 
+* 메인화면에는 가구 쇼핑몰의 대표적인 배너와 관리자들이 등록한 상품의 이름, 상세설명, 가격을 보여주었습니다. 
+* Thymeleaf Layout Dialect dependency를 추가하여 하나의 layout 페이지를 여러페이지에 적용할 수 있게 하였습니다. &nbsp; 그리고 footer, header를 만들고 layout에서 변경되는 영역엔 fragment="content"로 설정하여 만들페이지를 끼워 넣었습니다.
+* Navbar는 부트스트랩을 참고하여 만들었고 header영역에도 추가 하였습니다. &nbsp; 회원가입, 상품등록, 주문 등 이후에 메인페이지로 돌아갈 수 있게 main.html를 만들었습니다.
+<br>
+
 
 <br>
 
@@ -70,10 +75,15 @@
 ![메인화면2](https://user-images.githubusercontent.com/106241314/216755785-eee2b926-8841-4467-8a75-8e76e08079d8.png)
 
 <br>
-* 메인화면에는 가구 쇼핑몰의 대표적인 배너와 관리자들이 등록한 상품의 이름, 상세설명, 가격을 보여주었습니다. Thymeleaf Layout Dialect dependency를 추가하여 하나의 layout 페이지를 여러페이지에 적용할 수 있게 하였습니다. 그리고 footer, header를 만들고 layout에서 변경되는 영억엔 fragment="content"로 설정하여 만들페이지를 끼워 넣었습니다. Navbar는 부트스트랩을 참고하여 만들었고 header영역에도 추가 하였습니다. 회원가입, 상품등록, 주문 등 이후에 메인페이지로 돌아갈 수 있게 main.html를 만들었습니다.
-<br>
+
 
 ## 로그인, 회원가입
+
+* 회원가입, 로그인은 security dependency를 추가하여 구현하였습니다.&nbsp; 그에 따라 WebSecurityConfigurerAdapter를 상속 받는 클래스에 @EnableWebSecurity 어노테이션을 선언하여 SpringSecurityFilterChain이 자동으로 포함이 되게 하였고 메소드 오버라이딩을 통해 보안 설정을 커스터마이징 하였습니다. 
+* SecurityConfig.java를 만들어 보안 설정을 하였습니다.&nbsp; 각각 멤버가 일반 유저인지 관리자인지 구분할 수 있게 Role.java 코드를 작성했습니다.&nbsp; 회원가입에 있어서 멤버가 유저인지 관리자인지 구분할 수 있는 역할이 있어야 했는데 enum 타입의 Role.java 를 만들었습니다.  
+*  회원가입 페이지는 부트스트랩을 참고하여 변형하여 사용하였습니다.&nbsp; validation dependency를 추가하여 회원 가입 처리를 할때 유효성 검증을 할 수 있게하여 회원가입이 실패하면 다시 회원 가입 페이지로 이동해 이유를 화면에 명시하였고 회원가입이 성공하면 메인페이지로 리다이렉트 시켜주었습니다.  
+*  로그인, 로그아웃은 비밀번호 암호화를 위해 PasswordEncoder를 사용하였고 MemberService가 데이터베이스에서 회원 정보를 가져오는 역할을 하는 UserDetailsService를 구현하게 하여 기능을 만들었습니다.
+<br>
 
 <br>
 
@@ -85,8 +95,7 @@
 
 <br>
 
-* 회원가입, 로그인은 security dependency를 추가하여 구현하였습니다. 그에 따라 WebSecurityConfigurerAdapter를 상속 받는 클래스에 @EnableWebSecurity 어노테이션을 선언하면 SpringSecurityFilterChain이 자동으로 포함이 됩니다. 메소드 오버라이딩으 통해 보안 설정을 커스터마이징할 수 있습니다. SecurityConfig.java를 만들어 보안 설정을 하였습니다. 각각 멤버가 일반 유저인지 관리자인지 구분할 수 있게 Role.java 코드를 작성했습니다. 회원가입에 있어서 멤버가 유저인지 관리자인지 구분할 수 있는 역할이 있어야 했는데 enum 타입의 Role.java 를 만들었습니다.   회원가입 페이지는 부트스트랩을 참고하여 변형하여 사용하였습니다. validation dependency를 추가하여 회원 가입 처리를 할때 유효성 검증을 할 수 있게하여 회원가입이 실패하면 다시 회원 가입 페이지로 이동해 이유를 화면에 명시하였고 회원가입이 성공하면 메인페이지로 리다이렉트 시켜주었습니다.  로그인, 로그아웃은 비밀번호 암호화를 위해 PasswordEncoder를 사용하였고 MemberService가 데이터베이스에서 회원 정보를 가져오는 역할을 하는 UserDetailsService를 구현하게 하여 기능을 만들었습니다.
-<br>
+
 
 ## 상품등록, 관리 ( 관리자용 )
 
