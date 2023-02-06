@@ -124,7 +124,7 @@
 * 주문 이력 조회는 OrderRepository @Query 어노테이션을 이용하여 쿼리를 작성하여 구현하였습니다. 
 * 주문취소는 주문 수량만큼의 상품의 재고를 증가시키는 메소드와 주문상태를 취소상태로 바꿔주는 메소드를 구현했습니다.&nbsp; OrderController 클래스에 주문번호를 받아서 주문 취소 로직을 호출하는 메소드를 만들어 비동기 요청 방식으로 처리했습니다.
 * 상품 상세 페이지에서 장바구니에 담을 상품의 아이디와 수량을 전달 받을 DTO클래스 CartItem을 생성하여 최소 수량은 1개 이상으로 제한하였습니다.&nbsp; 그리고 장바구니에 담을 상품 엔티티를 생성하는 메소드와 장바구니에 담을 수량을 증가시켜주는 메소드를 이 클래스에 추가했습니다. 
-* 장바구니 내역 조회 페이지에 전달할 DTO클래스 CartDetailDto를 만들고 장바구니 페이지에 전달할 리스트를 쿼리하나로 조회하는 JPQL문을 CartItemRepository에 작성하였습니다.&nbsp; CartService 클래스에 장바구니 상품의 수량을 업데이트하는 로직을 추가하였습니다.&nbsp; 이때 @PatchMapping와 @DeleteMapping 어노테이션을 이용하였습니다. &nbsp; 장바구니 상품 삭제는 CartService에 있는 장바구니 상품번호를 파라미터로 받아서 삭제하는 로직을 추가하여 구현하였습니다.
+* 장바구니 내역 조회 페이지에 전달할 DTO클래스 CartDetailDto를 만들고 장바구니 페이지에 전달할 리스트를 쿼리하나로 조회하는 JPQL문을 CartItemRepository에 작성하였습니다.&nbsp; CartService 클래스에 장바구니 상품의 수량을 업데이트하는 로직을 추가하였습니다.&nbsp; 이때 CartController에서 cartItemId를 파라미터 변수로 받아 @PatchMapping와 @DeleteMapping 어노테이션을 이용하였습니다. &nbsp; 장바구니 상품 삭제는 CartService에 있는 장바구니 상품번호를 파라미터로 받아서 삭제하는 로직을 추가하여 구현하였습니다.
 
 
 
